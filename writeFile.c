@@ -35,7 +35,7 @@ int savePrompt() {
 			move(MaxRows,0);
 			msgLine(COLOR_QUESTION,MSG_START,"Enter file name ");
 			printw("[\"%s\"",buffer_name);
-			name = msgLine(COLOR_QUESTION,MSG_LINE,"]:");
+			name = (char *)msgLine(COLOR_QUESTION,MSG_LINE,"]:");
 			if (strlen(name) < 2) {
 				writeFile(buffer_name);
 				saved = 1;
